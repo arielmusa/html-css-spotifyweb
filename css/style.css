@@ -82,6 +82,8 @@ main {
 }
 .player {
   height: var(--player-height);
+  display: flex;
+  justify-content: space-between;
 }
 
 .sidebar {
