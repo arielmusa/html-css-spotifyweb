@@ -1,6 +1,7 @@
 :root {
   --player-height: 50px;
   --sidebar-width: 50px;
+  --main-top-section: 50px;
 }
 
 /**************** RESET ****************/
@@ -25,6 +26,9 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+h1 {
+  display: none;
 }
 
 /*************** UTILS ***************/
@@ -93,4 +97,36 @@ main {
 
 .main-content {
   width: calc(100% - var(--sidebar-width));
+}
+
+.main-top-section {
+  height: var(--main-top-section);
+}
+
+.main-content-body {
+  height: calc(100% - var(--main-top-section));
+}
+
+/**************** RESPONSIVE STYLE ****************/
+/***************** layout-xs *****************/
+@media screen and (min-width: 375px) {
+  .sidebar {
+    width: calc(var(--sidebar-width) + 150px);
+  }
+
+  .sidebar-playlist {
+    display: block;
+  }
+}
+
+/***************** layout-s *****************/
+@media screen and (min-width: 375px) {
+}
+
+/***************** layout-md *****************/
+@media screen and (min-width: 375px) {
+}
+
+/***************** layout-lg *****************/
+@media screen and (min-width: 375px) {
 }
