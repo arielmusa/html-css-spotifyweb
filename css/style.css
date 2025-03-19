@@ -2,8 +2,9 @@
   --player-height: 50px;
   --sidebar-width: 50px;
   --main-top-section: 50px;
-  --default-distance-padding: 5px;
-  --default-distance-margin: 5px;
+  --small-distance-padding: 5px;
+  --default-distance-padding: 10px;
+  --small-distance-margin: 5px;
 }
 
 /**************** RESET ****************/
@@ -16,6 +17,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #090b13;
+  color: #656565;
 }
 
 ul li {
@@ -30,10 +32,28 @@ img {
   max-width: 100%;
   display: block;
 }
+h2 {
+  color: white;
+}
 
 .sidebar-top-menu svg {
   width: 25px;
-  padding-bottom: var(--default-distance-padding);
+  padding-bottom: var(--small-distance-padding);
+}
+.spotify-logo--text {
+  display: none;
+}
+
+.sidebar span {
+  display: none;
+}
+
+.sidebar {
+  font-weight: bold;
+}
+
+hr {
+  display: none;
 }
 
 /*************** UTILS ***************/
@@ -76,6 +96,24 @@ img {
   width: calc(100% / 5);
 }
 
+.flex {
+  display: flex;
+}
+
+.align-i-center {
+  align-items: center;
+}
+
+.active path,
+.active span {
+  fill: white !important;
+  color: white;
+}
+.fa-plus {
+  color: black;
+  font-size: 13px;
+}
+
 /**************** LAYOUT ****************/
 .wrapper {
   width: 100vw;
@@ -110,7 +148,7 @@ main {
   background-color: grey;
   padding: 5px;
   border-radius: 50%;
-  margin-top: var(--default-distance-margin);
+  margin-top: var(--small-distance-margin);
 }
 
 .sidebar-bottom .download {
@@ -134,26 +172,73 @@ main {
 }
 
 /**************** RESPONSIVE STYLE ****************/
-/***************** layout-xs *****************/
-@media screen and (min-width: 375px) {
-  .sidebar {
-    width: calc(var(--sidebar-width) + 150px);
-  }
-
-  /* TODO: fix overflow */
-  .sidebar-playlist {
-    display: block;
-  }
-}
-
 /***************** layout-s *****************/
 @media screen and (min-width: 375px) {
+  .sidebar {
+    padding-left: var(--default-distance-padding);
+    width: calc(var(--sidebar-width) + 150px);
+    align-items: flex-start;
+    margin-left: var(--default-distance-margin);
+  }
+  .sidebar span {
+    display: inline-block;
+    font-size: 10px;
+    padding-left: var(--small-distance-padding);
+  }
+  .sidebar-top .spotify-logo {
+    display: none;
+  }
+  .sidebar-top .spotify-logo--text {
+    display: block;
+    width: 90px;
+    padding-bottom: calc(var(--default-distance-padding) * 2);
+  }
+  .sidebar-top-menu svg {
+    width: 20px;
+    padding-bottom: var(--small-distance-padding);
+  }
+  .sidebar-top-menu svg path {
+    fill: gray;
+  }
+  /* TODO: fix overflow in sidebar playlist */
+  .sidebar-playlist {
+    padding-top: var(--default-distance-padding);
+    display: block;
+  }
+
+  h2.playlist-heading {
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  .sidebar-playlist .icon-create-playlist {
+    background-color: grey;
+    padding: 6px;
+    text-align: center;
+    margin-top: var(--small-distance-margin);
+  }
+  /* reset padding */
+  .text-create-playlist {
+    padding-left: 0px !important;
+  }
+
+  .playlist li {
+    font-size: 10px;
+    padding-top: var(--default-distance-padding);
+  }
+  hr {
+    display: block;
+    width: 120px;
+    border: 0px solid gray;
+    border-bottom-width: 1px;
+    margin-top: var(--small-distance-margin);
+    text-align: center;
+  }
 }
 
 /***************** layout-md *****************/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 768px) {
 }
 
 /***************** layout-lg *****************/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 1024px) {
 }
