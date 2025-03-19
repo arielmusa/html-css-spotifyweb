@@ -82,7 +82,15 @@ main {
 
 .sidebar {
   width: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.sidebar-playlist {
+  display: none;
+}
+
 .main-content {
   width: calc(100% - var(--sidebar-width));
 }
