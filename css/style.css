@@ -2,6 +2,8 @@
   --player-height: 50px;
   --sidebar-width: 50px;
   --main-top-section: 50px;
+  --default-distance-padding: 5px;
+  --default-distance-margin: 5px;
 }
 
 /**************** RESET ****************/
@@ -13,6 +15,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #090b13;
 }
 
 ul li {
@@ -27,8 +30,10 @@ img {
   max-width: 100%;
   display: block;
 }
-h1 {
-  display: none;
+
+.sidebar-top-menu svg {
+  width: 25px;
+  padding-bottom: var(--default-distance-padding);
 }
 
 /*************** UTILS ***************/
@@ -91,8 +96,26 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+.sidebar-top {
+  padding-top: 10px;
+}
+.sidebar-bottom svg {
+  width: 15px;
 }
 
+/* TODO: fix profile background */
+.sidebar-bottom .profile {
+  background-color: grey;
+  padding: 5px;
+  border-radius: 50%;
+  margin-top: var(--default-distance-margin);
+}
+
+.sidebar-bottom .download {
+  text-align: center;
+}
 .sidebar-playlist {
   display: none;
 }
@@ -117,6 +140,7 @@ main {
     width: calc(var(--sidebar-width) + 150px);
   }
 
+  /* TODO: fix overflow */
   .sidebar-playlist {
     display: block;
   }
