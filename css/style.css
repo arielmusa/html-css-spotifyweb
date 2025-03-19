@@ -105,6 +105,7 @@ main {
 
 .main-content-body {
   height: calc(100% - var(--main-top-section));
+  overflow: auto;
 }
 
 /**************** RESPONSIVE STYLE ****************/
