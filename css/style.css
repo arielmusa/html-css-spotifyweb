@@ -141,11 +141,8 @@ main {
 }
 .sidebar-top {
   padding-top: 10px;
-  width: 100%;
+
   overflow: hidden;
-}
-.sidebar-bottom {
-  width: 100%;
 }
 .sidebar-bottom svg {
   width: 15px;
@@ -186,6 +183,10 @@ main {
     width: calc(var(--sidebar-width) + 150px);
     align-items: flex-start;
     margin-left: var(--default-distance-margin);
+  }
+  .sidebar-top,
+  .sidebar-bottom {
+    width: 100%;
   }
   .sidebar span {
     display: inline-block;
