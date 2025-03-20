@@ -1,10 +1,12 @@
 :root {
-  --player-height: 50px;
+  --player-height: 55px;
   --sidebar-width: 50px;
   --main-top-section: 50px;
   --small-distance-padding: 5px;
   --default-distance-padding: 10px;
   --small-distance-margin: 5px;
+  --small-gap-player-controls: 10px;
+  --gap-player-controls: 15px;
 }
 
 /**************** RESET ****************/
@@ -17,7 +19,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #090b13;
-  color: #656565;
+  color: rgb(171, 171, 171);
+  font-weight: bold;
 }
 
 ul li {
@@ -176,6 +179,169 @@ main {
   overflow: auto;
 }
 
+/***************** PLAYER *****************/
+
+/**** 
+PLAYER SONG INFO
+****/
+
+.player {
+  padding-top: var(--default-distance-padding);
+  padding-bottom: var(--default-distance-padding);
+  background-color: #282828;
+}
+
+.player .player-song-info {
+  display: flex;
+  align-items: center;
+  padding-left: var(--default-distance-padding);
+}
+
+.player .song-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player .song-image {
+  width: 20px;
+}
+.player .song-info .song {
+  padding-left: var(--small-distance-padding);
+  padding-right: var(--small-distance-padding);
+}
+.player .song-info .song .playlist-title {
+  color: white;
+  font-size: 8px;
+}
+
+.player .song-info .song .song-title {
+  font-size: 6px;
+}
+.player .player-song-info .fa-regular {
+  font-size: 10px;
+}
+
+/**** 
+PLAYER MAIN CONTROLS 
+****/
+
+.player-song-main-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--small-gap-player-controls);
+  font-size: 10px !important;
+  color: white;
+
+  /* USELESS?! */
+  /*   position: absolute;
+  left: 0;
+  right: 0; */
+}
+
+.player-song-main-controls .top-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-player-controls);
+}
+
+.player-song-main-controls .top-controls .left-main-controls {
+  display: flex;
+  gap: var(--small-gap-player-controls);
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.player .top-controls .center-play-control {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.player-song-main-controls .top-controls .right-main-controls {
+  display: flex;
+  gap: var(--small-gap-player-controls);
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+/****
+PLAYER TIME
+****/
+.player .song-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--small-gap-player-controls) / 2);
+  position: relative;
+}
+
+.player .song-time .time {
+  font-size: 8px;
+  color: white;
+}
+
+.player .song-time .time-bar {
+  width: 70px;
+  height: 2px;
+  background-color: gray;
+  border-radius: 50px;
+}
+
+.player .song-time .active-time-bar {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  /* border: 1px solid white; */
+  border-radius: 50px;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+/****
+PLAYER SECONDARY CONTROLS
+****/
+
+.player .player-song-secondary-controls {
+  display: flex;
+  align-items: center;
+  padding-right: var(--default-distance-padding);
+  gap: calc(var(--small-gap-player-controls) / 2);
+  font-size: 8px;
+  color: white;
+}
+
+.player .volume {
+  position: relative;
+  display: flex;
+  gap: calc(var(--small-gap-player-controls) / 2);
+}
+.player .volume .volume-control {
+  display: flex;
+  align-items: center;
+}
+
+.player .player-song-secondary-controls .volume-bar {
+  width: 50px;
+  height: 2px;
+  background-color: gray;
+  border-radius: 50px;
+}
+
+.player .player-song-secondary-controls .active-volume-bar {
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  /* border: 1px solid white; */
+  border-radius: 50px;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
 /**************** RESPONSIVE STYLE ****************/
 /***************** layout-s *****************/
 @media screen and (min-width: 375px) {
@@ -244,6 +410,24 @@ main {
     border-bottom-width: 1px;
     margin-top: var(--small-distance-margin);
     text-align: center;
+  }
+
+  /***************** PLAYER *****************/
+  .player .song-image {
+    width: 30px;
+  }
+  .player .song-info .song .playlist-title {
+    font-size: 10px;
+  }
+
+  .player .song-info .song .song-title {
+    font-size: 8px;
+  }
+  .player .player-song-info .fa-regular {
+    font-size: 12px;
+  }
+  .player .song-info .song {
+    padding-right: var(--default-distance-padding);
   }
 }
 
