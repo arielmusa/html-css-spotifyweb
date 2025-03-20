@@ -141,7 +141,8 @@ main {
 }
 .sidebar-top {
   padding-top: 10px;
-
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 .sidebar-bottom svg {
@@ -209,7 +210,9 @@ main {
   /* TODO: fix overflow in sidebar playlist */
   .sidebar-playlist {
     padding-top: var(--default-distance-padding);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
   h2.playlist-heading {
@@ -225,6 +228,9 @@ main {
   /* reset padding */
   .text-create-playlist {
     padding-left: 0px !important;
+  }
+  .playlist {
+    overflow: auto;
   }
 
   .playlist li {
