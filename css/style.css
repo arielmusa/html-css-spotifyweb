@@ -5,6 +5,7 @@
   --small-distance-padding: 5px;
   --default-distance-padding: 10px;
   --small-distance-margin: 5px;
+  --default-distance-margin: 10px;
   --small-gap-player-controls: 10px;
   --gap-player-controls: 15px;
 }
@@ -39,23 +40,18 @@ h2 {
   color: white;
 }
 
-.sidebar-top-menu svg {
+.sidebar-top-menu img {
   width: 25px;
   padding-bottom: var(--small-distance-padding);
 }
-.spotify-logo--text {
+.logo {
+  padding-bottom: var(--default-distance-padding);
+}
+.logo-big {
   display: none;
 }
 
 .sidebar span {
-  display: none;
-}
-
-.sidebar {
-  font-weight: bold;
-}
-
-hr {
   display: none;
 }
 
@@ -106,9 +102,6 @@ hr {
 .align-i-center {
   align-items: center;
 }
-.sidebar-top-menu svg path {
-  fill: gray;
-}
 .active path,
 .active span {
   fill: white !important;
@@ -142,11 +135,15 @@ main {
   align-items: center;
   overflow: hidden;
 }
+
 .sidebar-top {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+.sidebar-bottom {
+  padding-top: var(--small-distance-padding);
 }
 .sidebar-bottom svg {
   width: 15px;
@@ -156,7 +153,11 @@ main {
 .sidebar-bottom .profile svg {
   background-color: grey;
   border-radius: 50%;
-  margin-top: var(--small-distance-margin);
+}
+.profile {
+  color: white;
+  padding-top: var(--default-distance-padding);
+  padding-bottom: var(--default-distance-padding);
 }
 
 .sidebar-bottom .download {
@@ -348,28 +349,51 @@ RESPONSIVE STYLE
 
 /***************** layout-s *****************/
 @media screen and (min-width: 375px) {
+  .sidebar .active {
+    border-left: 3px solid lime;
+  }
+  .sidebar-top-menu li:hover {
+    color: white;
+  }
+  a:hover {
+    color: white;
+  }
   .sidebar {
-    padding-left: var(--default-distance-padding);
     width: calc(var(--sidebar-width) + 150px);
     align-items: flex-start;
-    margin-left: var(--default-distance-margin);
   }
+  .sidebar-top-menu li,
+  .sidebar-playlist,
+  .sidebar-bottom {
+    padding-left: var(--default-distance-padding);
+    padding-right: var(--default-distance-padding);
+  }
+
   .sidebar-top,
   .sidebar-bottom {
     width: 100%;
   }
+
   .sidebar span {
     display: inline-block;
     font-size: 10px;
     padding-left: var(--small-distance-padding);
   }
-  .sidebar-top .spotify-logo {
+  .logo {
+    padding-left: var(--default-distance-padding);
+  }
+
+  .sidebar-top .logo-small {
     display: none;
   }
-  .sidebar-top .spotify-logo--text {
+  .sidebar-top .logo-big {
     display: block;
-    width: 90px;
+    width: 100px !important;
     padding-bottom: calc(var(--default-distance-padding) * 2);
+  }
+  .sidebar-top-menu li {
+    display: flex;
+    align-items: center;
   }
   .sidebar-top-menu svg {
     width: 20px;
@@ -406,13 +430,9 @@ RESPONSIVE STYLE
     font-size: 10px;
     padding-top: var(--default-distance-padding);
   }
-  hr {
-    display: block;
-    width: 120px;
-    border: 0px solid gray;
-    border-bottom-width: 1px;
-    margin-top: var(--small-distance-margin);
-    text-align: center;
+  .sidebar-bottom .download {
+    border-bottom: 1px solid gray;
+    padding-bottom: var(--small-distance-padding);
   }
   /**** 
 PLAYER MAIN CONTROLS 
