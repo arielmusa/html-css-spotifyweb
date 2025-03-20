@@ -103,7 +103,9 @@ hr {
 .align-i-center {
   align-items: center;
 }
-
+.sidebar-top-menu svg path {
+  fill: gray;
+}
 .active path,
 .active span {
   fill: white !important;
@@ -135,18 +137,23 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 .sidebar-top {
   padding-top: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.sidebar-bottom {
+  width: 100%;
 }
 .sidebar-bottom svg {
   width: 15px;
 }
 
 /* TODO: fix profile background */
-.sidebar-bottom .profile {
+.sidebar-bottom .profile svg {
   background-color: grey;
-  padding: 5px;
   border-radius: 50%;
   margin-top: var(--small-distance-margin);
 }
@@ -197,9 +204,7 @@ main {
     width: 20px;
     padding-bottom: var(--small-distance-padding);
   }
-  .sidebar-top-menu svg path {
-    fill: gray;
-  }
+
   /* TODO: fix overflow in sidebar playlist */
   .sidebar-playlist {
     padding-top: var(--default-distance-padding);
