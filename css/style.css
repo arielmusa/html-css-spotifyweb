@@ -342,7 +342,10 @@ PLAYER SECONDARY CONTROLS
   top: calc(50% - 1px);
 }
 
-/**************** RESPONSIVE STYLE ****************/
+/**************** 
+RESPONSIVE STYLE 
+****************/
+
 /***************** layout-s *****************/
 @media screen and (min-width: 375px) {
   .sidebar {
@@ -411,7 +414,20 @@ PLAYER SECONDARY CONTROLS
     margin-top: var(--small-distance-margin);
     text-align: center;
   }
+  /**** 
+PLAYER MAIN CONTROLS 
+****/
+  .player .song-time .time-bar {
+    width: 150px;
+  }
 
+  .player .song-time .active-time-bar {
+    width: 30px;
+  }
+}
+
+/***************** layout-md *****************/
+@media screen and (min-width: 600px) {
   /***************** PLAYER *****************/
   .player .song-image {
     width: 30px;
@@ -429,12 +445,63 @@ PLAYER SECONDARY CONTROLS
   .player .song-info .song {
     padding-right: var(--default-distance-padding);
   }
-}
+  /**** 
+PLAYER MAIN CONTROLS 
+****/
+  .player-song-main-controls {
+    font-size: 12px !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .player .top-controls .center-play-control {
+    font-size: 18px;
+  }
+  .player .song-time {
+    gap: var(--small-gap-player-controls);
+  }
 
-/***************** layout-md *****************/
-@media screen and (min-width: 768px) {
+  .player .song-time .time {
+    font-size: 8px;
+  }
+
+  .player .song-time .time-bar {
+    width: 200px;
+  }
+
+  .player .song-time .active-time-bar {
+    width: 30px;
+  }
+
+  /****
+PLAYER SECONDARY CONTROLS
+****/
+  .player .volume {
+    gap: var(--small-gap-player-controls);
+  }
+  .player .player-song-secondary-controls {
+    font-size: 10px;
+    gap: var(--small-gap-player-controls);
+  }
+  .player .player-song-secondary-controls .volume-bar {
+    width: 80px;
+  }
+
+  .player .player-song-secondary-controls .active-volume-bar {
+    width: 20px;
+  }
 }
 
 /***************** layout-lg *****************/
 @media screen and (min-width: 1024px) {
+  /**** 
+PLAYER MAIN CONTROLS 
+****/
+  .player .song-time .time-bar {
+    width: 250px;
+  }
+
+  .player .song-time .active-time-bar {
+    width: 50px;
+  }
 }
