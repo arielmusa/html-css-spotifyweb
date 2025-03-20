@@ -495,10 +495,11 @@ PLAYER SECONDARY CONTROLS
 /***************** layout-lg *****************/
 @media screen and (min-width: 1024px) {
   :root {
-    --player-height: 80px;
+    --player-height: 90px;
   }
   .player {
     padding: var(--default-distance-padding);
+    position: relative;
   }
   .player .song-info .song {
     padding-left: var(--default-distance-padding);
@@ -523,9 +524,11 @@ PLAYER MAIN CONTROLS
 ****/
   .player-song-main-controls {
     font-size: 15px !important;
-    /*  position: absolute;
+    position: absolute;
     left: 0;
-    right: 0; */
+    right: 0;
+    bottom: 0;
+    top: 0;
   }
   .player .top-controls .center-play-control {
     font-size: 24px;
