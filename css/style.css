@@ -450,9 +450,9 @@ PLAYER MAIN CONTROLS
 ****/
   .player-song-main-controls {
     font-size: 12px !important;
-    position: absolute;
+    /*  position: absolute;
     left: 0;
-    right: 0;
+    right: 0; */
   }
   .player .top-controls .center-play-control {
     font-size: 18px;
@@ -494,14 +494,65 @@ PLAYER SECONDARY CONTROLS
 
 /***************** layout-lg *****************/
 @media screen and (min-width: 1024px) {
+  :root {
+    --player-height: 80px;
+  }
+  .player {
+    padding: var(--default-distance-padding);
+  }
+  .player .song-info .song {
+    padding-left: var(--default-distance-padding);
+    padding-right: var(--default-distance-padding);
+  }
+  .player .song-image {
+    width: 50px;
+  }
+  .player .song-info .song .playlist-title {
+    font-size: 14px;
+  }
+
+  .player .song-info .song .song-title {
+    font-size: 10px;
+  }
+  .player .player-song-info .fa-regular {
+    font-size: 12px;
+  }
+
   /**** 
 PLAYER MAIN CONTROLS 
 ****/
+  .player-song-main-controls {
+    font-size: 15px !important;
+    /*  position: absolute;
+    left: 0;
+    right: 0; */
+  }
+  .player .top-controls .center-play-control {
+    font-size: 24px;
+  }
+  .player .song-time {
+    gap: var(--gap-player-controls);
+  }
+
+  .player .song-time .time {
+    font-size: 10px;
+  }
+
   .player .song-time .time-bar {
-    width: 250px;
+    width: 300px;
   }
 
   .player .song-time .active-time-bar {
     width: 50px;
+  }
+
+  /****
+PLAYER SECONDARY CONTROLS
+****/
+  .player .player-song-secondary-controls {
+    font-size: 12px;
+  }
+  .player .player-song-secondary-controls .volume-bar {
+    width: 100px;
   }
 }
