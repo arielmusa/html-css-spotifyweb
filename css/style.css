@@ -266,6 +266,10 @@ SONG CARDS
   color: white;
   font-size: 12px;
 }
+.song-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .main-content-body .song-card .song-heading .song-artist {
   font-size: 10px;
   font-weight: light;
@@ -409,6 +413,21 @@ PLAYER TIME
   height: 100%;
   background-color: white;
   border-radius: 50px;
+  position: relative;
+}
+.player .song-time .active-time-bar:hover {
+  background-color: lime;
+}
+.player .song-time .active-time-bar:hover::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transform: translateY(-5px);
+  right: 0;
 }
 
 /****
@@ -447,6 +466,21 @@ PLAYER SECONDARY CONTROLS
   height: 4px;
   background-color: white;
   border-radius: 50px;
+  position: relative;
+}
+.player .player-song-secondary-controls .active-volume-bar:hover {
+  background-color: lime;
+}
+.player .player-song-secondary-controls .active-volume-bar:hover::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transform: translateY(-5px);
+  right: 0;
 }
 
 /**************** 
