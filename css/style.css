@@ -216,6 +216,19 @@ main {
   text-transform: uppercase;
   font-size: 12px;
 }
+.main-content-body .playlist-category-links li {
+  position: relative;
+}
+
+.main-content-body .playlist-category-links .active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: lime;
+  left: 25%;
+}
 /**** 
 SONG CARDS
 ****/
@@ -542,6 +555,10 @@ PLAYER MAIN CONTROLS
 
 /***************** layout-md *****************/
 @media screen and (min-width: 600px) {
+  /* MAIN CONTENT */
+  [class*="col"] {
+    width: calc(100% / 4);
+  }
   /***************** PLAYER *****************/
   .player .song-image {
     width: 30px;
@@ -610,6 +627,10 @@ PLAYER SECONDARY CONTROLS
 @media screen and (min-width: 1024px) {
   :root {
     --player-height: 90px;
+  }
+  /* MAIN CONTENT */
+  [class*="col"] {
+    width: calc(100% / 6);
   }
   .player {
     padding: var(--default-distance-padding);
