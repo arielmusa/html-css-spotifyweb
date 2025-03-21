@@ -229,7 +229,8 @@ main {
   width: 30px;
   height: 3px;
   background-color: lime;
-  left: 25%;
+  left: calc(50% - 15px);
+  margin-top: var(--small-distance-margin);
 }
 /**** 
 SONG CARDS
@@ -469,7 +470,7 @@ PLAYER SECONDARY CONTROLS
 }
 
 .player .player-song-secondary-controls .volume-bar {
-  width: 100%;
+  width: 50px;
   height: 4px;
   background-color: gray;
   border-radius: 50px;
