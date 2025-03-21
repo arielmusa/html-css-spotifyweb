@@ -187,7 +187,7 @@ main {
 }
 
 .main-content-body {
-  height: calc(100% - var(--main-top-section) - var(--player-height));
+  height: calc(100% - var(--player-height));
   overflow: auto;
 }
 
@@ -218,6 +218,17 @@ main {
 }
 .main-content-body .playlist-category-links li {
   position: relative;
+}
+
+.main-content-body .playlist-category-links .active::after,
+.main-content-body .playlist-category-links li:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: lime;
+  left: 25%;
 }
 
 .main-content-body .playlist-category-links .active::after {
