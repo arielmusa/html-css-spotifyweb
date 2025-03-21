@@ -439,7 +439,7 @@ PLAYER TIME
   background-color: white;
   position: absolute;
   transform: translateY(-5px);
-  right: 0;
+  right: -7.5px;
 }
 
 /****
@@ -495,7 +495,7 @@ PLAYER SECONDARY CONTROLS
   background-color: white;
   position: absolute;
   transform: translateY(-5px);
-  right: 0;
+  right: -7.5px;
 }
 
 /**************** 
