@@ -339,7 +339,15 @@ PLAYER SONG INFO
 .player .player-song-info .fa-regular {
   font-size: 10px;
 }
-
+.song-whishlist-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap-player-controls) / 2);
+}
+.song-whishlist-icons > *:hover {
+  color: white;
+  cursor: pointer;
+}
 /**** 
 PLAYER MAIN CONTROLS 
 ****/
@@ -360,6 +368,10 @@ PLAYER MAIN CONTROLS
   justify-content: center;
   align-items: center;
   gap: var(--gap-player-controls);
+}
+.player-song-main-controls .top-controls i:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .player-song-main-controls .top-controls .left-main-controls {
@@ -443,6 +455,9 @@ PLAYER SECONDARY CONTROLS
   font-size: 8px;
   color: white;
   width: 30%;
+}
+.player .player-song-secondary-controls i:hover {
+  cursor: pointer;
 }
 
 .player .volume {
